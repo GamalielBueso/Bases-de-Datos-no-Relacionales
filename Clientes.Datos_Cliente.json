@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "682179e7ad66949cb4bbe060"
+  },
+  "idCliente": "01",
+  "nombre": "Victor",
+  "apellido": "Bueso",
+  "correo": "gamabueso@gmail.com",
+  "telefono": "555-1234",
+  "direccion": "Izalco, Sonsonate"
+},
+{
+  "_id": {
+    "$oid": "68217ad9ad66949cb4bbe062"
+  },
+  "id": "02",
+  "nombre": "Luis",
+  "apellido": "Martínez",
+  "correo": "luismartinez@hotmail.com",
+  "telefono": "555-5678",
+  "direccion": "Av. Central, Sonsonate"
+},
+{
+  "_id": {
+    "$oid": "68217ad9ad66949cb4bbe063"
+  },
+  "id": "03",
+  "nombre": "David",
+  "apellido": "Cruz",
+  "correo": "davidcruz@yahoo.com",
+  "telefono": "555-4321",
+  "direccion": "Calle Norte, Sonsonate"
+}]
