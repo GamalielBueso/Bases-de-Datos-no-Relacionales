@@ -1,0 +1,308 @@
+[{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735bd"
+  },
+  "nombre": "Ana",
+  "ciudad": "Lima",
+  "edad": 28,
+  "correo": "ana@gmail.com",
+  "cargo": "Desarrolladora",
+  "departamento": "Tecnología"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735be"
+  },
+  "nombre": "Carlos",
+  "ciudad": "Bogotá",
+  "edad": 34,
+  "correo": "carlos@yahoo.com",
+  "cargo": "diseñador",
+  "departamento": "Tecnología"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735bf"
+  },
+  "nombre": "María",
+  "ciudad": "Lima",
+  "edad": 22,
+  "correo": "maria@hotmail.com",
+  "cargo": "secretaria",
+  "departamento": "Tecnología"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c0"
+  },
+  "nombre": "José",
+  "ciudad": "Quito",
+  "edad": 40,
+  "correo": "jose@gmail.com",
+  "cargo": "programador",
+  "departamento": "Tecnología"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c1"
+  },
+  "nombre": "Lucía",
+  "ciudad": "Bogotá",
+  "edad": 19,
+  "correo": "lucia@outlook.com",
+  "cargo": "tecnico en mantenimiento",
+  "departamento": "Informatica"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c2"
+  },
+  "nombre": "Pedro",
+  "ciudad": "Lima",
+  "edad": 35,
+  "correo": "pedro@gmail.com",
+  "cargo": "encargado de redes",
+  "departamento": "Informatica"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c3"
+  },
+  "nombre": "Carolina",
+  "ciudad": "Lima",
+  "edad": 28,
+  "correo": "carolina@gmail.com",
+  "cargo": "contadora",
+  "departamento": "contabilidad"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c4"
+  },
+  "nombre": "Sofia",
+  "ciudad": "Bogotá",
+  "edad": 34,
+  "correo": "sofia@yahoo.com",
+  "cargo": "secretaria",
+  "departamento": "contabilidad"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c5"
+  },
+  "nombre": "Ricardo",
+  "ciudad": "Lima",
+  "edad": 22,
+  "correo": "ricardo@hotmail.com",
+  "cargo": "programador",
+  "departamento": "Tecnología"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c6"
+  },
+  "nombre": "Jose",
+  "ciudad": "Quito",
+  "edad": 40,
+  "correo": "jose1@gmail.com",
+  "cargo": "contador",
+  "departamento": "contabilidad"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c7"
+  },
+  "nombre": "Amilcar",
+  "ciudad": "Bogotá",
+  "edad": 19,
+  "correo": "amilcar@outlook.com",
+  "cargo": "Desarrolladora Backend",
+  "departamento": "Informatica"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c8"
+  },
+  "nombre": "Dania",
+  "ciudad": "Lima",
+  "edad": 35,
+  "correo": "dania@gmail.com",
+  "cargo": "Diseñador",
+  "departamento": "Tecnología"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735c9"
+  },
+  "nombre": "Carla",
+  "ciudad": "Lima",
+  "edad": 28,
+  "correo": "carla@gmail.com",
+  "cargo": "auditor",
+  "departamento": "Tecnología"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735ca"
+  },
+  "nombre": "Yoselin",
+  "ciudad": "Bogotá",
+  "edad": 34,
+  "correo": "yoselin@yahoo.com",
+  "cargo": "auditor",
+  "departamento": "Informatica"
+},
+{
+  "_id": {
+    "$oid": "682e9a43c580c4b3a8b735cb"
+  },
+  "nombre": "Gerson",
+  "ciudad": "Lima",
+  "edad": 22,
+  "correo": "gerson@hotmail.com",
+  "cargo": "auditor",
+  "departamento": "Contabilidad"
+}]
+
+//Creacion de indices
+
+db.empleados.createIndex({ ciudad: 1 })
+ciudad_1
+db.empleados.createIndex({ ciudad: 1, edad: 1 })
+ciudad_1_edad_1
+db.empleados.createIndex({ correo: 1 }, { unique: true })
+correo_1
+db.empleados.createIndex({ cargo: "text" })
+cargo_text
+
+//consultas con Indices
+db.empleados.find({ ciudad: "Lima" })
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735bd'),
+  nombre: 'Ana',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'ana@gmail.com',
+  cargo: 'Desarrolladora',
+  departamento: 'Tecnología'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735bf'),
+  nombre: 'María',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'maria@hotmail.com',
+  cargo: 'secretaria',
+  departamento: 'Tecnología'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c2'),
+  nombre: 'Pedro',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'pedro@gmail.com',
+  cargo: 'encargado de redes',
+  departamento: 'Informatica'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c3'),
+  nombre: 'Carolina',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'carolina@gmail.com',
+  cargo: 'contadora',
+  departamento: 'contabilidad'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c5'),
+  nombre: 'Ricardo',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'ricardo@hotmail.com',
+  cargo: 'programador',
+  departamento: 'Tecnología'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c8'),
+  nombre: 'Dania',
+  ciudad: 'Lima',
+  edad: 35,
+  correo: 'dania@gmail.com',
+  cargo: 'Diseñador',
+  departamento: 'Tecnología'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c9'),
+  nombre: 'Carla',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'carla@gmail.com',
+  cargo: 'auditor',
+  departamento: 'Tecnología'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735cb'),
+  nombre: 'Gerson',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'gerson@hotmail.com',
+  cargo: 'auditor',
+  departamento: 'Contabilidad'
+}
+db.empleados.find({ ciudad: "Bogotá", edad: 34 })
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735be'),
+  nombre: 'Carlos',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'carlos@yahoo.com',
+  cargo: 'diseñador',
+  departamento: 'Tecnología'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c4'),
+  nombre: 'Sofia',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'sofia@yahoo.com',
+  cargo: 'secretaria',
+  departamento: 'contabilidad'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735ca'),
+  nombre: 'Yoselin',
+  ciudad: 'Bogotá',
+  edad: 34,
+  correo: 'yoselin@yahoo.com',
+  cargo: 'auditor',
+  departamento: 'Informatica'
+}
+db.empleados.find({ correo: "carolina@gmail.com" })
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c3'),
+  nombre: 'Carolina',
+  ciudad: 'Lima',
+  edad: 28,
+  correo: 'carolina@gmail.com',
+  cargo: 'contadora',
+  departamento: 'contabilidad'
+}
+db.empleados.find({ $text: { $search: "programador" } })
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c5'),
+  nombre: 'Ricardo',
+  ciudad: 'Lima',
+  edad: 22,
+  correo: 'ricardo@hotmail.com',
+  cargo: 'programador',
+  departamento: 'Tecnología'
+}
+{
+  _id: ObjectId('682e9a43c580c4b3a8b735c0'),
+  nombre: 'José',
+  ciudad: 'Quito',
+  edad: 40,
+  correo: 'jose@gmail.com',
+  cargo: 'programador',
+  departamento: 'Tecnología'
+}
